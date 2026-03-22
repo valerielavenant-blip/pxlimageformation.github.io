@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — PXL.IMAGE.FORMATION</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --red: #cd1719; --dark: #282727; --white: #ffffff; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    color: var(--dark);
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--dark);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--red);
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 40px;
+  }
+  .header-logo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-logo::before {
+    content: '';
+    width: 3px;
+    height: 18px;
+    background: var(--red);
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .header-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .header-title em {
+    color: var(--red);
+    font-style: normal;
+  }
+  .header-date {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255,255,255,.4);
+  }
+  .header-date strong {
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  /* CONTACT BOX */
+  .contact-box {
+    background: var(--white);
+    border-left: 4px solid var(--red);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .contact-box strong {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--red);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* CONTENU */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::before {
+    content: '';
+    width: 4px;
+    height: 18px;
+    background: var(--red);
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .section-body {
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  /* LISTE */
+  .rights-list {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .rights-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+  }
+  .rights-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* CNIL BOX */
+  .cnil-box {
+    background: var(--white);
+    border: 1px solid #eee;
+    border-top: 3px solid var(--red);
+    border-radius: 0 0 8px 8px;
+    padding: 16px 20px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .cnil-box a {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .cnil-box a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--dark);
+    padding: 24px 32px;
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .footer-text {
+    font-size: 12px;
+    color: rgba(255,255,255,.3);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .footer-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 8px 18px;
+    border: 1px solid rgba(205,23,25,.4);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--red);
+    text-decoration: none;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    transition: background .2s;
+  }
+  .footer-back:hover { background: rgba(205,23,25,.1); }
+
+  @media (max-width: 600px) {
+    .header-title { font-size: 24px; }
+    .content { padding: 32px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-logo">PXL.IMAGE.FORMATION</div>
+    <h1 class="header-title">Politique de<br><em>confidentialité</em></h1>
+    <div class="header-date">Dernière mise à jour : <strong>mars 2026</strong></div>
+  </div>
+</div>
+
+<!-- CONTENU -->
+<div class="content">
+
+  <!-- CONTACT BOX -->
+  <div class="contact-box">
+    <strong>Responsable du traitement</strong>
+    PXL.IMAGE.FORMATION<br>
+    Compte Instagram : @pxl.image.formation<br>
+    Contact : <a href="mailto:contact@pxl-image.fr" style="color:var(--red);font-weight:600;">contact@pxl-image.fr</a>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-title">1. Objet de la présente politique</div>
+    <div class="section-body">
+      La présente politique de confidentialité a pour but d'informer les utilisateurs du formulaire de pré-inscription PXL.IMAGE.FORMATION des conditions dans lesquelles leurs données personnelles sont collectées, traitées et conservées, conformément au Règlement Général sur la Protection des Données (RGPD) — Règlement (UE) 2016/679 — et à la loi Informatique et Libertés.
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-title">2. Données collectées</div>
+    <div class="section-body">
+      Dans le cadre du formulaire de liste d'attente, les données suivantes sont collectées :
+      <ul class="rights-list" style="margin-top:12px;">
+        <li>Prénom et nom</li>
+        <li>Adresse e-mail</li>
+        <li>Niveau en 3D (débutant, curieux, intermédiaire ou professionnel)</li>
+      </ul>
+      <p style="margin-top:12px;color:#888;font-size:13px;">Ces données sont fournies volontairement par l'utilisateur lors de son inscription.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-title">3. Finalité du traitement</div>
+    <div class="section-body">
+      Les données collectées sont utilisées exclusivement aux fins suivantes :
+      <ul class="rights-list" style="margin-top:12px;">
+        <li>Informer les inscrits du lancement de la formation PXL.IMAGE.FORMATION</li>
+        <li>Adapter le contenu pédagogique en fonction du profil des inscrits</li>
+        <li>Prendre contact avec les prospects avant le lancement</li>
+      </ul>
+      <p style="margin-top:12px;color:#888;font-size:13px;">Aucune donnée ne sera utilisée à des fins commerciales non liées à PXL.IMAGE.FORMATION, ni cédée ou vendue à des tiers.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-title">4. Base légale du traitement</div>
+    <div class="section-body">
+      Le traitement de vos données repose sur votre <strong>consentement explicite</strong>, recueilli lors de la soumission du formulaire (case à cocher obligatoire).
+      <p style="margin-top:12px;">Vous pouvez retirer ce consentement à tout moment, <strong>sans effet rétroactif</strong>, en nous adressant un email à : <a href="mailto:contact@pxl-image.fr" style="color:var(--red);font-weight:600;">contact@pxl-image.fr</a> avec pour objet <strong>"Retrait de consentement"</strong>. Nous procéderons à la suppression de vos données dans un délai de <strong>30 jours</strong> suivant votre demande.</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-title">5. Durée de conservation</div>
+    <div class="section-body">
+      Les données sont conservées jusqu'au lancement officiel de la formation, et au maximum <strong>3 ans</strong> à compter de la date d'inscription, sauf demande de suppression anticipée de votre part.
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-title">6. Destinataires des données</div>
+    <div class="section-body">
+      Vos données sont destinées exclusivement à PXL.IMAGE.FORMATION. Elles peuvent être hébergées sur des outils tiers de gestion de contacts (ex. : Brevo, Mailchimp, Airtable) soumis à des garanties de sécurité adéquates et conformes au RGPD.
+      <p style="margin-top:10px;color:#888;font-size:13px;">Aucune donnée n'est transmise à des partenaires commerciaux, régies publicitaires ou tiers non autorisés.</p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-title">7. Vos droits</div>
+    <div class="section-body">
+      Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+      <ul class="rights-list" style="margin-top:12px;">
+        <li><strong>Droit d'accès</strong> : obtenir une copie des données vous concernant</li>
+        <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes</li>
+        <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+        <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+        <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+        <li><strong>Droit de retrait du consentement</strong> : à tout moment, sans effet rétroactif</li>
+      </ul>
+      <p style="margin-top:14px;">Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@pxl-image.fr" style="color:var(--red);font-weight:600;">contact@pxl-image.fr</a>. Nous nous engageons à répondre dans un délai de <strong>30 jours</strong>.</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-title">8. Sécurité des données</div>
+    <div class="section-body">
+      Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, altération ou divulgation.
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <div class="section-title">9. Cookies</div>
+    <div class="section-body">
+      Le formulaire de pré-inscription ne dépose pas de cookies de traçage. Si cette politique venait à évoluer, vous en seriez informé préalablement.
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <div class="section-title">10. Réclamation auprès de la CNIL</div>
+    <div class="section-body">
+      Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous avez le droit d'introduire une réclamation auprès de la CNIL :
+      <div class="cnil-box">
+        <strong style="color:var(--dark);font-size:13px;letter-spacing:0;text-transform:none;">CNIL — Commission Nationale de l'Informatique et des Libertés</strong><br>
+        3 Place de Fontenoy — TSA 80715 — 75334 Paris Cedex 07<br>
+        <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <div class="section-title">11. Modifications</div>
+    <div class="section-body">
+      PXL.IMAGE.FORMATION se réserve le droit de modifier cette politique à tout moment. Les utilisateurs inscrits seront notifiés par e-mail en cas de modification substantielle.
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      Ce document est fourni à titre indicatif. Pour toute situation complexe, consultez un juriste spécialisé en droit numérique.
+    </div>
+    <a href="index.html" class="footer-back">← Retour au formulaire</a>
+  </div>
+</div>
+
+</body>
+</html>
