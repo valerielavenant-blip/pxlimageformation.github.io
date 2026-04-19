@@ -37,14 +37,12 @@ body {
   overflow-x: hidden;
 }
 
-/* ── TYPOGRAPHY ── */
 h1, h2, h3 { font-family: var(--font-title); font-weight: 800; line-height: 1.15; }
 h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.7rem, 3.5vw, 2.75rem); letter-spacing: -0.01em; }
 h3 { font-size: 1.1rem; font-weight: 700; }
 p { font-size: 1rem; line-height: 1.7; }
 
-/* ── UTILITIES ── */
 .container { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
 .label {
   font-size: 0.7rem;
@@ -77,7 +75,6 @@ p { font-size: 1rem; line-height: 1.7; }
 }
 .red { color: var(--red); }
 
-/* ── NAV ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -126,7 +123,6 @@ nav .inner {
 }
 .btn-nav:hover { background: var(--red-dark); }
 
-/* ── HERO ── */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -243,7 +239,6 @@ nav .inner {
 .duo-info-name { font-size: .85rem; font-weight: 500; }
 .duo-info-role { font-size: .72rem; color: var(--muted); }
 
-/* ── FORMATIONS ── */
 .formations { padding: 6rem 0; border-top: 0.5px solid var(--border); }
 .section-header { margin-bottom: 3rem; }
 .section-header .label { margin-bottom: .75rem; }
@@ -296,7 +291,6 @@ nav .inner {
 }
 .tag.red { border-color: rgba(205,23,25,0.3); color: rgba(205,23,25,0.8); background: rgba(205,23,25,0.06); }
 
-/* ── PRICING ── */
 .pricing { padding: 6rem 0; border-top: 0.5px solid var(--border); }
 .pricing-header { margin-bottom: 4rem; text-align: center; }
 .pricing-header h2 { margin-bottom: .75rem; }
@@ -327,7 +321,6 @@ nav .inner {
 .ab-b2c { background: rgba(61,186,94,0.1); color: #3dba5e; border: 0.5px solid rgba(61,186,94,0.2); }
 .ab-b2b { background: rgba(205,23,25,0.1); color: #e05355; border: 0.5px solid rgba(205,23,25,0.2); }
 
-/* B2C pricing */
 .b2c-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
 .b2c-plan {
   background: var(--charcoal);
@@ -389,7 +382,6 @@ nav .inner {
 }
 .plan-cta-solid:hover { background: var(--red-dark); }
 
-/* B2B pricing */
 .b2b-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .b2b-card {
   background: var(--charcoal-light);
@@ -412,20 +404,44 @@ nav .inner {
   margin-bottom: .5rem;
 }
 .b2b-desc { font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; }
-.b2b-price-line {
+
+.devis-block {
   display: flex;
-  align-items: baseline;
-  gap: .4rem;
-  margin-bottom: .2rem;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(205,23,25,0.06);
+  border: 0.5px solid rgba(205,23,25,0.18);
+  border-radius: 3px;
+  padding: .875rem 1.25rem;
+  margin-bottom: 1.25rem;
 }
-.b2b-price-main {
+.devis-label {
   font-family: var(--font-title);
   font-weight: 800;
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   color: var(--white);
+  white-space: nowrap;
 }
-.b2b-price-unit { font-size: .8rem; color: var(--muted); }
-.b2b-price-note { font-size: .72rem; color: var(--muted); margin-bottom: 1.25rem; }
+.devis-note {
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.devis-factors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1.25rem;
+}
+.devis-factor {
+  font-size: .7rem;
+  padding: .2rem .65rem;
+  border-radius: 2px;
+  border: 0.5px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
 .b2b-includes { list-style: none; display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.5rem; }
 .b2b-includes li { font-size: .82rem; color: rgba(255,255,255,0.65); display: flex; gap: .5rem; }
 .b2b-includes li::before { content: '✓'; color: #3dba5e; font-size: .7rem; margin-top: .18rem; flex-shrink: 0; }
@@ -448,11 +464,9 @@ nav .inner {
 }
 .b2b-cta.primary:hover { background: var(--red-dark); }
 
-/* Individuel inline layout */
 .b2b-indiv-content { display: flex; flex-direction: column; gap: .25rem; }
 .b2b-indiv-aside { display: flex; flex-direction: column; gap: .75rem; align-items: flex-end; }
 
-/* ── FINANCEMENT ── */
 .financement { padding: 5rem 0; border-top: 0.5px solid var(--border); }
 .fin-grid {
   display: grid;
@@ -492,7 +506,6 @@ nav .inner {
 .fin-step-title { font-size: .9rem; font-weight: 500; margin-bottom: .2rem; }
 .fin-step-desc { font-size: .8rem; color: var(--muted); line-height: 1.5; }
 
-/* ── DUO ── */
 .equipe { padding: 6rem 0; border-top: 0.5px solid var(--border); }
 .equipe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border); }
 .equipe-card { background: var(--charcoal); padding: 2.5rem 2.5rem; }
@@ -513,7 +526,6 @@ nav .inner {
 .equipe-bio { font-size: .88rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 1.25rem; }
 .equipe-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
 
-/* ── CONTACT ── */
 .contact { padding: 6rem 0; border-top: 0.5px solid var(--border); }
 .contact-inner {
   display: grid;
@@ -568,7 +580,6 @@ nav .inner {
 .form-submit:hover { background: var(--red-dark); }
 .form-legal { font-size: .7rem; color: rgba(255,255,255,0.3); margin-top: .75rem; line-height: 1.5; }
 
-/* ── FOOTER ── */
 footer {
   border-top: 0.5px solid var(--border);
   padding: 2.5rem 0;
@@ -584,7 +595,6 @@ footer {
 .footer-right { display: flex; gap: 1.5rem; align-items: center; }
 .footer-nda { font-size: .72rem; color: rgba(255,255,255,0.3); }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -595,7 +605,6 @@ footer {
 .hero-ctas   { animation: fadeUp .5s .3s ease both; }
 .hero-visual { animation: fadeUp .5s .35s ease both; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-grid      { grid-template-columns: 1fr; gap: 3rem; }
   .formations-grid { grid-template-columns: 1fr; }
@@ -617,7 +626,6 @@ footer {
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="container inner">
     <a href="#" class="logo">PXL <span>IMAGE</span> FORMATION</a>
@@ -630,7 +638,6 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="container">
@@ -644,20 +651,20 @@ footer {
           <em>plus vite.</em>
         </h1>
         <p class="hero-desc">
-          Des formations Blender, Unreal Engine et DaVinci Resolve
-          conçues par des praticiens actifs, structurées pour
-          que vous progressiez vite et reteniez durablement.
+          Nos formations Blender, Unreal Engine et DaVinci Resolve
+          sont conçues par des praticiens actifs. Vous progressez vite
+          et retenez durablement.
         </p>
         <div class="hero-ctas">
-          <a href="#tarifs" class="btn-primary">Voir les tarifs</a>
-          <a href="#contact" class="btn-secondary">Demander un programme</a>
+          <a href="#contact" class="btn-primary">Demander un devis</a>
+          <a href="#formations" class="btn-secondary">Voir les programmes</a>
         </div>
       </div>
       <div class="hero-visual">
         <div class="stat-cards">
           <div class="stat-card">
             <div class="stat-val">20<span class="small">+</span></div>
-            <div class="stat-lbl">Ans d'expertise professionnelle 3D</div>
+            <div class="stat-lbl">Ans d’expertise professionnelle 3D</div>
           </div>
           <div class="stat-card">
             <div class="stat-val">100<span class="small">%</span></div>
@@ -673,7 +680,7 @@ footer {
           </div>
         </div>
         <div class="duo-card">
-          <div class="duo-title">L'équipe pédagogique</div>
+          <div class="duo-title">L’équipe pédagogique</div>
           <div class="duo-people">
             <div class="duo-person">
               <div class="duo-avatar av-w">WL</div>
@@ -696,7 +703,6 @@ footer {
   </div>
 </section>
 
-<!-- FORMATIONS -->
 <section class="formations" id="formations">
   <div class="container">
     <div class="section-header">
@@ -704,11 +710,10 @@ footer {
       <h2>Trois logiciels.<br>Un seul OF spécialisé.</h2>
     </div>
     <div class="formations-grid">
-
       <div class="formation-card">
         <span class="formation-icon">◈</span>
         <div class="formation-name">Blender</div>
-        <p class="formation-desc">Du zéro à la production professionnelle. Modélisation, textures, éclairage, animation, rendu Cycles &amp; Eevee. Workflow IA inclus dans les modules avancés.</p>
+        <p class="formation-desc">Vous partez de zéro et atteignez la production professionnelle. Vous maîtrisez la modélisation, les textures, l’éclairage, l’animation et le rendu Cycles &amp; Eevee. Les modules avancés intègrent le workflow IA.</p>
         <div class="formation-tags">
           <span class="tag red">Débutant → Expert</span>
           <span class="tag">Modélisation</span>
@@ -717,11 +722,10 @@ footer {
           <span class="tag">IA 3D</span>
         </div>
       </div>
-
       <div class="formation-card">
         <span class="formation-icon">◉</span>
         <div class="formation-name">Unreal Engine 5</div>
-        <p class="formation-desc">Rendu temps réel, ArchViz, cinéma virtuel, VFX. MetaHumans, Lumen, Nanite, Sequencer. Pour les professionnels de l'architecture, du jeu et de la production vidéo.</p>
+        <p class="formation-desc">Vous maîtrisez le rendu temps réel, l’ArchViz, le cinéma virtuel et les VFX. Vous travaillez avec MetaHumans, Lumen, Nanite et Sequencer. La formation s’adresse aux professionnels de l’architecture, du jeu et de la production vidéo.</p>
         <div class="formation-tags">
           <span class="tag red">Initiation → Avancé</span>
           <span class="tag">ArchViz</span>
@@ -729,11 +733,10 @@ footer {
           <span class="tag">Temps réel</span>
         </div>
       </div>
-
       <div class="formation-card">
         <span class="formation-icon">◑</span>
         <div class="formation-name">DaVinci Resolve</div>
-        <p class="formation-desc">Montage professionnel, étalonnage colorimétrique, Fusion. Du workflow débutant au grade cinéma. Compatible avec les projets Blender et Unreal.</p>
+        <p class="formation-desc">Vous pratiquez le montage professionnel, l’étalonnage colorimétrique et Fusion. Vous progressez du workflow débutant au grade cinéma. La formation est compatible avec vos projets Blender et Unreal.</p>
         <div class="formation-tags">
           <span class="tag red">Initiation → Expert</span>
           <span class="tag">Étalonnage</span>
@@ -741,52 +744,41 @@ footer {
           <span class="tag">Fusion</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- TARIFS -->
 <section class="pricing" id="tarifs">
   <div class="container">
     <div class="pricing-header">
       <p class="label">Tarifs</p>
-      <h2>Transparent.<br>Finançable. Sans surprise.</h2>
-      <p>Tous nos tarifs sont indiqués hors taxes. La TVA s'applique pour les formations non exonérées. Nos formations sont éligibles aux financements publics et paritaires.</p>
+      <h2>Adapté à votre projet.<br>Finançable. Sans surprise.</h2>
+      <p>Nos tarifs professionnels sont établis sur devis, en fonction de votre domaine d’application, de votre niveau et du format souhaité. Tous nos programmes sont éligibles aux financements publics et paritaires.</p>
     </div>
-
-    <!-- B2C -->
     <div class="pricing-section">
       <div class="pricing-section-title">
-        <span class="audience-badge ab-b2c">Particuliers · Freelances · Reconversion</span>
+        <span class="audience-badge ab-b2c">Particuliers · Freelances · Autodidactes</span>
         <h3>Accès en ligne — Patreon</h3>
       </div>
       <div class="b2c-grid">
-
         <div class="b2c-plan">
           <div class="plan-name">Découverte</div>
-          <div class="plan-price">
-            <span class="plan-price-val">0€</span>
-          </div>
+          <div class="plan-price"><span class="plan-price-val">0€</span></div>
           <div class="plan-price-note">Gratuit · Sans engagement</div>
           <ul class="plan-features">
             <li>Modules 01 &amp; 02 complets offerts</li>
-            <li>Introduction à l'univers 3D</li>
+            <li>Introduction à l’univers 3D</li>
             <li>Interface Blender pas à pas</li>
             <li>Accès communauté Patreon</li>
           </ul>
           <a href="https://www.patreon.com/pxlimageformation" target="_blank" class="plan-cta plan-cta-outline">Commencer gratuitement</a>
         </div>
-
         <div class="b2c-plan featured">
           <div class="plan-name">Étudiant</div>
-          <div class="plan-price">
-            <span class="plan-price-val">9€</span>
-            <span class="plan-price-unit">/mois</span>
-          </div>
+          <div class="plan-price"><span class="plan-price-val">9€</span><span class="plan-price-unit">/mois</span></div>
           <div class="plan-price-note">Résiliable à tout moment</div>
           <ul class="plan-features">
-            <li>Accès à l'intégralité des cours</li>
+            <li>Accès à l’intégralité des cours</li>
             <li>Nouveaux modules chaque mois</li>
             <li>Fichiers sources téléchargeables</li>
             <li>Progression pédagogique structurée</li>
@@ -794,13 +786,9 @@ footer {
           </ul>
           <a href="https://www.patreon.com/pxlimageformation" target="_blank" class="plan-cta plan-cta-solid">Accéder aux cours</a>
         </div>
-
         <div class="b2c-plan">
           <div class="plan-name">Studio</div>
-          <div class="plan-price">
-            <span class="plan-price-val">24€</span>
-            <span class="plan-price-unit">/mois</span>
-          </div>
+          <div class="plan-price"><span class="plan-price-val">24€</span><span class="plan-price-unit">/mois</span></div>
           <div class="plan-price-note">Résiliable à tout moment</div>
           <ul class="plan-features">
             <li>Tout le niveau Étudiant</li>
@@ -811,61 +799,61 @@ footer {
           </ul>
           <a href="https://www.patreon.com/pxlimageformation" target="_blank" class="plan-cta plan-cta-outline">Rejoindre Studio</a>
         </div>
-
       </div>
     </div>
-
-    <!-- B2B -->
     <div class="pricing-section">
       <div class="pricing-section-title">
         <span class="audience-badge ab-b2b">Entreprises · Studios · Agences · RH</span>
         <h3>Formation professionnelle — Inter &amp; Intra</h3>
       </div>
       <div class="b2b-grid">
-
         <div class="b2b-card">
           <div class="b2b-type">Formation inter-entreprises</div>
           <div class="b2b-name">Session ouverte</div>
-          <div class="b2b-desc">Rejoignez une session en petit groupe (max 6 participants). Idéal pour monter en compétences individuellement avec financement OPCO.</div>
-          <div class="b2b-price-line">
-            <span class="b2b-price-main">1 750€</span>
-            <span class="b2b-price-unit">HT · par personne</span>
+          <div class="b2b-desc">Vous intégrez une session en petit groupe (max 6 participants). Vous montez en compétences individuellement avec financement OPCO.</div>
+          <div class="devis-block">
+            <span class="devis-label">Sur devis</span>
+            <span class="devis-note">Tarif établi selon le logiciel, le niveau et la durée du module retenu.</span>
           </div>
-          <div class="b2b-price-note">Module de 35h (5 jours). Tarif financement AFDAS, OPCO, France Travail.</div>
+          <div class="devis-factors">
+            <span class="devis-factor">Blender · Unreal Engine · DaVinci</span>
+            <span class="devis-factor">Débutant ou avancé</span>
+            <span class="devis-factor">Distanciel ou présentiel</span>
+          </div>
           <ul class="b2b-includes">
-            <li>Programme Blender, Unreal Engine ou DaVinci</li>
             <li>Évaluation de positionnement préalable</li>
             <li>Support de cours &amp; fichiers sources</li>
             <li>Attestation de fin de formation Qualiopi</li>
-            <li>Financement OPCO possible jusqu'à 100%</li>
+            <li>Financement OPCO possible jusqu’à 100%</li>
           </ul>
-          <a href="#contact" class="b2b-cta">Demander les dates</a>
+          <a href="#contact" class="b2b-cta">Demander les dates &amp; le devis</a>
         </div>
-
         <div class="b2b-card">
           <div class="b2b-type">Formation intra-entreprise</div>
           <div class="b2b-name">Programme sur mesure</div>
-          <div class="b2b-desc">Formation dispensée dans vos locaux ou en distanciel, conçue sur mesure pour votre contexte métier et vos outils de production.</div>
-          <div class="b2b-price-line">
-            <span class="b2b-price-main">À partir de 2 200€</span>
-            <span class="b2b-price-unit">HT / jour</span>
+          <div class="b2b-desc">La formation se déroule dans vos locaux ou en distanciel. Elle est conçue sur mesure pour votre contexte métier, vos outils de production et vos équipes.</div>
+          <div class="devis-block">
+            <span class="devis-label">Sur devis</span>
+            <span class="devis-note">Devis personnalisé selon le nombre de participants, la durée et le pipeline métier cible.</span>
           </div>
-          <div class="b2b-price-note">Groupe jusqu'à 8 participants. Tarif indicatif, devis personnalisé sur demande.</div>
+          <div class="devis-factors">
+            <span class="devis-factor">Architecture · Agences · Studios</span>
+            <span class="devis-factor">Groupe jusqu’à 8 participants</span>
+            <span class="devis-factor">Format hybride possible</span>
+          </div>
           <ul class="b2b-includes">
             <li>Audit des besoins et niveaux préalable</li>
             <li>Programme 100% adapté à votre pipeline</li>
-            <li>Présentiel, distanciel ou format hybride</li>
             <li>Livrables pédagogiques personnalisés</li>
             <li>Convention de formation et émargements</li>
           </ul>
           <a href="#contact" class="b2b-cta primary">Demander un devis</a>
         </div>
-
         <div class="b2b-card full">
           <div class="b2b-indiv-content">
             <div class="b2b-type">Accompagnement individuel</div>
             <div class="b2b-name">Coaching 3D personnalisé</div>
-            <div class="b2b-desc">Sessions individuelles avec William, adaptées à votre projet en cours. Idéal pour débloquer un point technique, avancer sur un rendu client ou préparer une certification.</div>
+            <div class="b2b-desc">Vous travaillez en sessions individuelles avec William, sur votre projet en cours. Vous débloquez un point technique, avancez sur un rendu client ou préparez une montée en compétences ciblée.</div>
             <ul class="b2b-includes">
               <li>Rendez-vous en visioconférence ou présentiel Paris</li>
               <li>Préparation de la session sur votre projet réel</li>
@@ -873,31 +861,25 @@ footer {
             </ul>
           </div>
           <div class="b2b-indiv-aside">
-            <div>
-              <div class="b2b-price-line">
-                <span class="b2b-price-main">150€</span>
-                <span class="b2b-price-unit">HT / heure</span>
-              </div>
-              <div class="b2b-price-note">Ou forfait demi-journée sur devis</div>
+            <div class="devis-block" style="flex-direction:column;gap:.3rem;align-items:flex-start">
+              <span class="devis-label">Sur devis</span>
+              <span class="devis-note">Tarif selon la durée, le sujet et la fréquence des sessions.</span>
             </div>
             <a href="#contact" class="b2b-cta">Réserver une session</a>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- FINANCEMENT -->
 <section class="financement" id="financement">
   <div class="container">
     <div class="fin-grid">
       <div class="fin-intro">
         <p class="label">Financement</p>
         <h2>Nos formations coûtent souvent zéro euro à vos équipes.</h2>
-        <p>PXL IMAGE FORMATION est certifié Qualiopi, ce qui vous ouvre l'accès aux financements publics et paritaires. Nous vous accompagnons dans le montage de votre dossier.</p>
+        <p>PXL IMAGE FORMATION est certifié Qualiopi, ce qui vous ouvre l’accès aux financements publics et paritaires. Nous vous accompagnons dans le montage de votre dossier.</p>
         <div class="fin-logos">
           <span class="fin-logo">AFDAS</span>
           <span class="fin-logo">Atlas</span>
@@ -911,7 +893,7 @@ footer {
           <div class="fin-num">01</div>
           <div>
             <div class="fin-step-title">Identifiez votre OPCO</div>
-            <div class="fin-step-desc">Chaque secteur d'activité a un OPCO dédié. Nous vous aidons à identifier le vôtre et à vérifier les conditions de prise en charge.</div>
+            <div class="fin-step-desc">Chaque secteur d’activité a un OPCO dédié. Nous vous aidons à identifier le vôtre et à vérifier les conditions de prise en charge.</div>
           </div>
         </div>
         <div class="fin-step">
@@ -925,7 +907,7 @@ footer {
           <div class="fin-num">03</div>
           <div>
             <div class="fin-step-title">Déposez votre demande</div>
-            <div class="fin-step-desc">Votre OPCO valide la prise en charge. Dans la majorité des cas, le coût résiduel pour l'entreprise est nul ou très faible.</div>
+            <div class="fin-step-desc">Votre OPCO valide la prise en charge. Dans la majorité des cas, le coût résiduel pour l’entreprise est nul ou très faible.</div>
           </div>
         </div>
         <div class="fin-step">
@@ -940,22 +922,18 @@ footer {
   </div>
 </section>
 
-<!-- ÉQUIPE -->
 <section class="equipe" id="equipe">
   <div class="container">
     <div class="section-header" style="margin-bottom:2.5rem">
-      <p class="label">L'équipe</p>
+      <p class="label">L’équipe</p>
       <h2>Deux expertises.<br>Un avantage unique.</h2>
     </div>
     <div class="equipe-grid">
-
       <div class="equipe-card">
         <div class="equipe-initials ei-w">WL</div>
         <div class="equipe-name">William Lacrosse</div>
         <div class="equipe-role">Expert praticien &amp; Formateur 3D</div>
-        <p class="equipe-bio">
-          Graphiste 3D depuis 2002, William a travaillé pour des grandes marques dans la publicité et la création numérique. Spécialisé en modélisation architecturale, textures et visualisation temps réel, il transmet une expertise forgée dans des projets professionnels réels — pas dans des tutoriels théoriques.
-        </p>
+        <p class="equipe-bio">Graphiste 3D depuis 2002, William intervient pour de grandes marques dans la publicité et la création numérique. Spécialisé en modélisation architecturale, textures et visualisation temps réel, il transmet une expertise ancrée dans des projets professionnels actifs — pas dans des tutoriels théoriques.</p>
         <div class="equipe-tags">
           <span class="tag">Blender</span>
           <span class="tag">Unreal Engine 5</span>
@@ -965,14 +943,11 @@ footer {
           <span class="tag">Consultant actif</span>
         </div>
       </div>
-
       <div class="equipe-card">
         <div class="equipe-initials ei-v">VL</div>
         <div class="equipe-name">Valérie Lavenant</div>
         <div class="equipe-role">Ingénieure pédagogique · Conception de parcours</div>
-        <p class="equipe-bio">
-          Après une carrière juridique au Ministère de la Justice, Valérie s'est spécialisée en ingénierie pédagogique. Elle conçoit les parcours PXL pour que chaque apprenant progresse efficacement, avec des séquences claires, des évaluations formatives et une attention portée à la qualité Qualiopi à chaque étape.
-        </p>
+        <p class="equipe-bio">Issue d’une carrière juridique au Ministère de la Justice, Valérie se spécialise aujourd’hui en ingénierie pédagogique. Elle conçoit les parcours PXL pour que chaque apprenant progresse efficacement, avec des séquences claires, des évaluations formatives et une attention portée à la qualité Qualiopi à chaque étape.</p>
         <div class="equipe-tags">
           <span class="tag">Ingénierie pédagogique</span>
           <span class="tag">Qualiopi</span>
@@ -981,40 +956,29 @@ footer {
           <span class="tag">Blended learning</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-inner">
       <div class="contact-left">
         <p class="label">Contact</p>
         <h2>Parlons de votre projet de formation.</h2>
-        <p>Que vous soyez un particulier en reconversion, un indépendant ou un responsable formation d'entreprise, nous vous répondons sous 48h avec un programme adapté.</p>
+        <p>Que vous soyez un particulier en reconversion, un indépendant ou un responsable formation d’entreprise, nous vous répondons sous 48h avec un programme adapté et un devis personnalisé.</p>
         <div class="contact-info">
           <div class="contact-row">
             <span class="contact-icon">📍</span>
-            <div class="contact-text">
-              <strong>Adresse</strong>
-              15 rue des Halles, 75001 Paris
-            </div>
+            <div class="contact-text"><strong>Adresse</strong>15 rue des Halles, 75001 Paris</div>
           </div>
           <div class="contact-row">
             <span class="contact-icon">✉</span>
-            <div class="contact-text">
-              <strong>Email</strong>
-              contact@pxl-image.fr
-            </div>
+            <div class="contact-text"><strong>Email</strong>contact@pxl-image.fr</div>
           </div>
           <div class="contact-row">
             <span class="contact-icon">🏅</span>
-            <div class="contact-text">
-              <strong>Certification Qualiopi</strong>
-              NDA 11757328275 · SIREN 941 027 070
-            </div>
+            <div class="contact-text"><strong>Certification Qualiopi</strong>NDA 11757328275 · SIREN 941 027 070</div>
           </div>
         </div>
       </div>
@@ -1034,7 +998,7 @@ footer {
             <option>Particulier / Freelance</option>
             <option>Salarié en formation continue</option>
             <option>Responsable formation / RH</option>
-            <option>Demandeur d'emploi</option>
+            <option>Demandeur d’emploi</option>
             <option>Autre</option>
           </select>
         </div>
@@ -1055,13 +1019,12 @@ footer {
           <textarea class="form-textarea" placeholder="Décrivez votre projet, votre niveau actuel, vos contraintes de planning..."></textarea>
         </div>
         <button type="button" class="form-submit" onclick="envoyerFormulaire()">Envoyer ma demande →</button>
-        <p class="form-legal">En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour répondre à votre demande. Conformément au RGPD, vous disposez d'un droit d'accès et de suppression.</p>
+        <p class="form-legal">En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour répondre à votre demande. Conformément au RGPD, vous disposez d’un droit d’accès et de suppression.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -1079,26 +1042,14 @@ footer {
 </footer>
 <script>
 function envoyerFormulaire() {
-  var nom     = document.querySelector('input[type="text"]').value.trim();
-  var email   = document.querySelector('input[type="email"]').value.trim();
-  var profil  = document.querySelectorAll('select')[0].value;
+  var nom = document.querySelector('input[type="text"]').value.trim();
+  var email = document.querySelector('input[type="email"]').value.trim();
+  var profil = document.querySelectorAll('select')[0].value;
   var formation = document.querySelectorAll('select')[1].value;
   var message = document.querySelector('textarea').value.trim();
-
-  if (!nom || !email) {
-    alert('Merci de renseigner votre nom et votre email.');
-    return;
-  }
-
+  if (!nom || !email) { alert('Merci de renseigner votre nom et votre email.'); return; }
   var sujet = encodeURIComponent('Demande de formation PXL IMAGE FORMATION — ' + (formation || 'Non précisé'));
-  var corps = encodeURIComponent(
-    'Nom : ' + nom + '\n' +
-    'Email : ' + email + '\n' +
-    'Profil : ' + (profil || 'Non précisé') + '\n' +
-    'Formation souhaitée : ' + (formation || 'Non précisé') + '\n\n' +
-    'Message :\n' + (message || 'Aucun message.')
-  );
-
+  var corps = encodeURIComponent('Nom : ' + nom + '\n' + 'Email : ' + email + '\n' + 'Profil : ' + (profil || 'Non précisé') + '\n' + 'Formation souhaitée : ' + (formation || 'Non précisé') + '\n\n' + 'Message :\n' + (message || 'Aucun message.'));
   window.location.href = 'mailto:contact@pxl-image.fr?subject=' + sujet + '&body=' + corps;
 }
 </script>
